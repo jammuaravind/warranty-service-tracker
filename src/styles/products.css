@@ -1,0 +1,26 @@
+.toolbar { display: flex; gap: 12px; margin-bottom: 16px; }
+.search-wide { flex: 1; } .search-wide input { width: 100%; }
+select { padding: 9px 12px; font: 400 14px var(--font-main); color: var(--text); background: var(--card); border: 1px solid var(--border); border-radius: 10px; }
+.table-wrap { overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.table th { padding: 10px 12px; text-align: left; font-weight: 600; color: var(--muted); white-space: nowrap; border-bottom: 1px solid var(--border); }
+.table td { padding: 12px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+.table tbody tr:last-child td { border-bottom: 0; } .table tbody tr:hover { background: #F8FAFC; }
+.cell-name { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; color: var(--text); } .cell-name:hover { color: var(--primary); text-decoration: none; }
+.cell-icon { display: grid; place-items: center; flex: none; width: 32px; height: 32px; color: var(--primary); background: #EFF6FF; border-radius: 8px; }
+.cell-icon.big { width: 48px; height: 48px; font-size: 24px; border-radius: 12px; }
+.actions { text-align: right; } .actions .icon-btn { margin-left: 2px; }
+
+.card-list { display: grid; gap: 14px; }
+.product-card { padding: 16px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
+.pc-head { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; } .pc-head h3 { flex: 1; font-size: 16px; }
+.product-card dl { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 0 0 8px; }
+.product-card dt { font-size: 12px; color: var(--muted); } .product-card dd { margin: 0; font-size: 14px; font-weight: 500; }
+.pc-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.only-mobile { display: none; }
+@media (max-width: 768px) { .only-desktop { display: none; } .only-mobile { display: grid; } .toolbar { flex-direction: column; } }
+
+.details-head { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 20px; } .details-head h2 { flex: 1; }
+.details-list { margin: 0; } .details-list > div { display: grid; grid-template-columns: 200px 1fr; gap: 12px; padding: 14px 0; border-top: 1px solid var(--border); }
+.details-list dt { color: var(--muted); font-size: 14px; } .details-list dd { margin: 0; font-weight: 500; overflow-wrap: anywhere; }
+@media (max-width: 560px) { .details-list > div { grid-template-columns: 1fr; gap: 2px; } }
